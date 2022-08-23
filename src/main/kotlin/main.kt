@@ -37,7 +37,7 @@ fun romanToInt(s: String): Int {
            total+=romanHashMap["${romanNumList[loopCount]}"]!!
            loopCount++
        }
-    } while (loopCount < romanNumList.size)
+    } while (loopCount < romanNumList.size) 
 
 
     return total
