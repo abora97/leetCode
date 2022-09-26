@@ -10,11 +10,11 @@ fun main() {
 
 fun isIsomorphic(s: String, t: String): Boolean {
     if (s.length != t.length) return false
-    var hashMap: HashMap<String, String> = HashMap<String, String>()
+    val hashMap: HashMap<String, String> = HashMap<String, String>()
     val sList = s.toMutableList()
     val tList = t.toMutableList()
     sList.forEachIndexed { index, c ->
-        if (hashMap.containsKey(c.toString()) || hashMap.containsKey(tList[index].toString())) {
+        if (hashMap.containsKey(c.toString()) || hashMap.containsValue(tList[index].toString()) ) {
             if (hashMap[c.toString()].equals(tList[index].toString()).not()) {
                 return false
             }
